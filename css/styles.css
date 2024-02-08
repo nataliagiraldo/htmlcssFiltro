@@ -1,0 +1,210 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Play', sans-serif;
+}
+.mostrar-menu {
+    position: absolute;
+    left: 210px;
+    top: 12px;
+    font-size: 1.8rem;
+
+}
+
+#check {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    width: 153px;
+    height: 100%;
+    background-color: white;
+    left: -100%;
+    top: 0;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+    left: -200px;
+   
+}
+.itemM a{
+    background-color: rgb(37, 101, 197);
+    border-radius: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 20px;
+
+}
+
+/* para los iconos */
+.menu a span {
+    visibility: hidden;
+
+}
+
+.menu a {
+    font-size: 1rem;
+    margin-left: 180px;
+
+}
+
+#check:checked~.menu a {
+    margin-left: 0;
+
+}
+
+#check:checked~.menu a span {
+    visibility: visible;
+    font-size: 1rem;
+    margin-left: 0;
+
+}
+
+/* fin iconos */
+#check:checked~.menu {
+    left: 0;
+    display: block;
+
+}
+
+#check:checked~.contenido {
+    margin-left: 155px;
+
+}
+
+.contenido {
+    transition: 0.5s;
+    margin-left: 55px;
+
+}
+
+/* fin menu*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    height: 30px;
+}
+
+
+
+.logo {
+    z-index: 200;
+}
+
+/* finmarco */
+
+
+.cuadrados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    column-gap: 5%;
+    row-gap: 40px;
+    padding: 20px;
+
+
+}
+
+
+
+.cuadrado img {
+    height: 500px;
+}
+
+div.info {
+    display: block;
+    height: 70px;
+    padding-left: 20%;
+}
+
+.cuadrado {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    border: solid 1px rgb(255, 255, 255);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.062);
+
+}
+
+
+
+div.cuadrado a {
+    text-decoration: none;
+    color: black;
+
+}
+
+div.cuadrado h3 {
+    padding-bottom: 4%;
+
+}
+
+div.info span {
+    background-color: rgba(37, 101, 197, 0.17);
+    padding: 3%;
+    border-radius: 10px;
+}
+
+
+
+.itemM {
+    margin: 5%;
+    border-radius: 10px;
+}
+
+
+
+.titulo {
+    padding: 3%;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width: 468px) {
+
+    .cuadrados {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+    }
+
+    div.info {
+        display: block;
+        height: 70px;
+        padding-left: 40%;
+    }
+
+    div.info span {
+        visibility: hidden;
+    }
+
+    .menu {
+        width: 110px;
+    }
+
+    #check:checked~.contenido {
+        margin-left: 115px;
+
+    }
+}

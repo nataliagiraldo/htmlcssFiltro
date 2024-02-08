@@ -1,0 +1,138 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Play', sans-serif;
+}
+
+.logo {
+    margin: 3%;
+}
+
+div.fotoPrincipal1 {
+    background: url('../imagenes/chaqueta1.jpg.webp') no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 350px;
+    grid-column: 2;
+    grid-row: 1/span 4;
+    transition: 0.7s;
+
+
+}
+
+.imagenes2:hover~.fotoPrincipal1 {
+    background: url('../imagenes/chaqueta2.jpg.webp') no-repeat;
+    background-size: cover;
+
+}
+
+.imagenes3:hover~.fotoPrincipal1 {
+    background: url('../imagenes/chaqueta3.jpg.webp') no-repeat;
+    background-size: cover;
+
+}
+
+.imagenes4:hover~.fotoPrincipal1 {
+    background: url('../imagenes/chaqueta4.jpg.webp') no-repeat;
+    background-size: cover;
+
+}
+
+/* fin cambio imagenes */
+/* diplay */
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+
+
+
+}
+
+.imagenes1 img,
+.imagenes2 img,
+.imagenes3 img,
+.imagenes4 img {
+    object-fit: cover;
+    height: 100%;
+    width: 80%;
+
+}
+
+.imagenes1,
+.imagenes2,
+.imagenes3,
+.imagenes4 {
+
+    z-index: 1;
+    grid-column: 1;
+}
+
+/* fin display */
+.infoProducto {
+    display: grid;
+    padding: 2%;
+    margin: 0 5%;
+    column-gap: 110px;
+    row-gap: 50px;
+    /* para no usar media query */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+
+/* espacios */
+
+
+.info {
+    padding-bottom: 5%;
+    border-radius: 10px;
+    background-color: #22549114;
+    padding: 10px 10px;
+
+}
+
+.info h2 {
+    padding-bottom: 4%;
+    color:rgb(37, 101, 197);
+}
+
+
+
+
+
+div.agregar {
+    background-color: rgba(37, 101, 197, 0.17);
+    height: 20px;
+    width: 100px;
+    text-align: center;
+    margin-top: 3%;
+    border-radius: 15px;
+   
+}
+
+.agregar a {
+    text-decoration: none;
+    color: black;
+
+
+}
+
+@media(max-width: 650px) {
+    .fotoPrincipal1 {
+        background: url('../imagenes/chaqueta1.jpg.webp') no-repeat;
+        background-size: cover;
+        height: 350px;
+        width: 215px;
+        grid-column: 2;
+        grid-row: 1/span 4;
+        transition: 0.7s;
+        justify-self: center;
+        align-self: center;
+        z-index: 0;
+
+
+    }
+
+}
